@@ -27,6 +27,8 @@ main_hitting_caregories: list = ["Batting Average, "Hits", "On-base Percentage"]
 # List of floats representing individual runs scored
 individual_runs_scored: list = [78, 67, 98, 104, 92]
 
+import statistics
+
 #####################################
 # Calculate Basic Statistics
 #   Do this BEFORE we declare the byline
