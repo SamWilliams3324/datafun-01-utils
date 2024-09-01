@@ -1,15 +1,18 @@
-''' ITERATION 3
+''' ITERATION 4
 
 Module: Professional Baseball Analytics - Reusable Module for My Data Analytics Projects
 
 This module provides a simple, reusable foundation for my analytics projects. 
 
 Process:
-In this third iteration, I declare additional variables to show skills with different data types.
+In this fourth iteration, I introduce some basic statistics using Python.
+- min() is a built in function to find the smallest value passed in
+- max() is a built in function to find the largest value passed in
+- The statistics module offers methods to calculate mean and standard deviation.
+'''
 
 #####################################
-# Declare global variables - keep byline at the end
-# We will use this information in a smarter byline
+# Declare global variables
 #####################################
 
 # Boolean variable to indicate if the company has baseball players
@@ -25,9 +28,22 @@ main_hitting_caregories: list = ["Batting Average, "Hits", "On-base Percentage"]
 individual_runs_scored: list = [78, 67, 98, 104, 92]
 
 #####################################
+# Calculate Basic Statistics
+#   Do this BEFORE we declare the byline
+#   So the values have been calculated
+#   and are ready for use in the byline.
+#####################################
+
+# Calculate basic stats using built-in functions min(), max() and statistics module functions mean() and stdev().
+min_score: float = min(individual_runs_scored)
+max_score: float = max(individual_runs_scored)
+mean_score: float = statistics.mean(individual_runs_scored)
+stdev_score: float = statistics.stdev(individual_runs_scored)
+
+######################################
 # Declare a global variable named byline.
 # Make it a multiline f-string to show our information.
-#####################################
+######################################
 
 byline: str = f""
 -----------------------------------------------------------------------
@@ -59,5 +75,5 @@ def main() -> None:
 # Conditional Execution 
 ######################################
 
-if_name_ == '_main_':
+if__name__ == '__main__':
    main()
