@@ -1,30 +1,46 @@
-''' ITERATION 2
+''' ITERATION 3
 
 Module: Professional Baseball Analytics - Reusable Module for My Data Analytics Projects
 
 This module provides a simple, reusable foundation for my analytics projects. 
 
 Process:
+In this third iteration, I declare additional variables to show skills with different data types.
 
-In this second iteration, add a function that returns the byline as a string.
-I'll create a function named get_byline().
-It'll return my byline to whatever calls the get_byline() function.
-I'll update the main() function to use the new get_byline() function.
+#####################################
+# Declare global variables - keep byline at the end
+# We will use this information in a smarter byline
+#####################################
 
-Same conditional boilerplate at the end.
+# Boolean variable to indicate if the company has baseball players
+has_baseball_players: bool = True
 
-I'll test this version before adding more code that shows:
-- my ability to declare variables of different types
-- my ability to use Python to calculate basic descriptive statistics.'''
+# Integer variable for the number of years in operation
+years_in_operation: int = 148
+
+# List of strings representing the main hitting categories
+main_hitting_caregories: list = ["Batting Average, "Hits", "On-base Percentage"]
+
+# List of floats representing individual runs scored
+individual_runs_scored: list = [78, 67, 98, 104, 92]
 
 #####################################
 # Declare a global variable named byline.
+# Make it a multiline f-string to show our information.
 #####################################
 
-byline: str = 'Professional Baseball Analytics: Delivering Professional Insights'
+byline: str = f""
+-----------------------------------------------------------------------
+Professional Baseball Analytics: Delivering Professional Insights
+-----------------------------------------------------------------------
+Has Baseball Players: {has_baseball_players}
+Years in Operation: {years_in_operation}
+Main Hitting Categories: {main_hitting_categories}
+Individual Runs Scored: {individual_runs_scored}
+"""
 
 #####################################
-# Define a main() function for this module.
+# Define the get_byline() Function
 #####################################
 
 def get_byline() -> str:
@@ -36,12 +52,12 @@ def get_byline() -> str:
 #####################################
 
 def main() -> None:
-    '''Print the byline to the console when this function is called.'''
+    '''Print results of get_byline() when main() is called.'''
     print(get_byline())
 
-#####################################
-# Conditional Execution
-#####################################
+######################################
+# Conditional Execution 
+######################################
 
-if __name__ == '__main__':
-    main()
+if_name_ == '_main_':
+   main()
